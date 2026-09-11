@@ -49,6 +49,10 @@ public class Prithee {
                 System.out.print(" ");
             }
             System.out.println();
+
+            if (indexofLine == whatsMyNextLine) {
+                break;
+            }
         }
     }
 
