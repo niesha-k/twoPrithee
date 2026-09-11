@@ -1,6 +1,5 @@
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Prithee {
     private int linesCorrectlySaidCount;
@@ -15,6 +14,14 @@ public class Prithee {
         this.linesCorrectlySaidCount = 0;
         this.linesWronglySaidCount = 0;
         this.random = new Random();
+    }
+
+    public int getLinesCorrectlySaidCount(){
+        return linesCorrectlySaidCount;
+    }
+
+    public int getlinesWronglySaidCount(){
+        return linesWronglySaidCount;
     }
 
     public int nextLinePlease(){
@@ -43,5 +50,22 @@ public class Prithee {
             }
             System.out.println();
         }
+    }
+
+    public boolean checkUserPrompted(int indexOfLine, int indexOfWord, String response){
+        String[] wordsFromLine = lines.get(indexOfLine).split(" ");
+        String correctedStatement = wordsFromLine[indexOfWord];
+
+        if (correctedStatement.equals(response)){
+            linesCorrectlySaidCount++;
+            return true;
+        } else {
+            linesWronglySaidCount++;
+            return false;
+        }
+    }
+
+    public boolean stop(){
+        return linesCorrectlySaidCount >= 3 || linesWronglySaidCount >=3;
     }
 }
