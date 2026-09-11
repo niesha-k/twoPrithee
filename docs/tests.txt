@@ -1,0 +1,18 @@
+Test #1:
+Input:
+"Hello"
+"Hello"
+"Hello"
+
+Expected:
+should stop after three correct answers
+stop() should return true
+
+Test #2
+Input:
+"Wrong"
+"Wrong"
+"Wrong"
+
+should stop after three incorrect answers
+stop() should return true

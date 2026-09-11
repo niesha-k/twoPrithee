@@ -1,0 +1,15 @@
+Prithee
+________________
+linesCorrectlySaidCount: Integer
+linesWronglySaidCount: Integer
+lines: String List
+random: Random
+-----------------
+Prithee(lines: String List):
+getLinesCorrectlySaidCount(): Integer
+getlinesWronglySaidCount(): Integer
+nextLinePlease(): Integer
+giveRandomWordFromLine(indexofLine: Integer): Integer
+printAndPromptNextWord(whatsMyNextLine: Integer, whatsMyNextWord: Integer): void
+checkUserPrompted(indexOfLine: Integer, indexOfWord: Integer, response: String): Boolean
+stop(): Boolean
